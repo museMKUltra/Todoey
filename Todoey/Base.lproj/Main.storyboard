@@ -12,7 +12,7 @@
         <!--Todoey-->
         <scene sceneID="Q9I-Xx-4an">
             <objects>
-                <tableViewController id="rFf-gQ-tRN" customClass="TodoListViewController" customModule="toDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rFf-gQ-tRN" customClass="TodoListViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1cl-MB-Cn5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="rFf-gQ-tRN" id="CXh-0R-ykN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todoey" id="8xd-sp-tae"/>
+                    <navigationItem key="navigationItem" title="Todoey" id="8xd-sp-tae">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ezz-mO-JnY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="rFf-gQ-tRN" id="MrR-e6-HrO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9D-wC-Fbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
